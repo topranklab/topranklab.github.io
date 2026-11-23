@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>업종별 Before / After | 상위노출랩 — 노출 변화 사례와 원클릭 스토어 진단</title>
+  <meta name="description" content="리빙·주방, 뷰티·스킨케어, 식품·건강기능, 쿠팡 로켓그로스, 패션·잡화, 오프라인 매장까지. 업종별로 어디를 먼저 손보면 순위와 유입이 움직이는지 Before/After 예시 모델로 정리했습니다. 원클릭 스토어 진단도 바로 가능합니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="업종별 Before / After | 상위노출랩" />
+  <meta property="og:description" content="업종별 노출 변화 예시 모델과 원클릭 스토어 진단." />
+  <meta property="og:url" content="https://topranklab.github.io/cases.html" />
+  <meta property="og:image" content="https://topranklab.github.io/hero-visual.png" />
+  <link rel="canonical" href="https://topranklab.github.io/cases.html" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <div class="promo-bar" id="promoBar" role="region" aria-label="선착순 혜택 안내">
+    <div class="container promo-inner">
+      <a class="promo-link" href="index.html#contact">
+        <span class="promo-gift" aria-hidden="true">🎁</span>
+        <span>상담만 받아도 <span class="promo-key">선착순 5명</span> '상품 찜' 무료 제공</span>
+        <span class="promo-go">· 지금 바로 무료 진단 받기 →</span>
+      </a>
+      <button class="promo-close" id="promoClose" type="button" aria-label="배너 닫기">×</button>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="상위노출랩 로고" />
+        <span>상위노출랩</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="about.html">회사소개</a></li>
+        <li><a href="shopping.html">쇼핑몰 상위노출</a></li>
+        <li><a href="marketing.html">종합 마케팅</a></li>
+        <li><a href="cases.html" class="active">업종별 사례</a></li>
+        <li><a href="index.html#contact">무료 진단</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener" class="nav-cta">무료 상담하기</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="모바일 메뉴">
+      <a href="index.html">홈</a>
+      <a href="about.html">회사소개</a>
+      <a href="shopping.html">쇼핑몰 상위노출</a>
+      <a href="marketing.html">종합 마케팅</a>
+      <a href="cases.html">업종별 사례</a>
+      <a href="index.html#contact">무료 진단</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+        <div>
+          <nav class="crumb" aria-label="현재 위치">
+            <a href="index.html">홈</a><span class="sep">/</span><span class="now">업종별 사례</span>
+          </nav>
+          <span class="pill-badge">BEFORE &amp; AFTER · 업종별</span>
+          <h1>
+            업종마다 순위를 막는 지점이<br />
+            <span style="color:#6ee7b7;">다르게 나타납니다</span>
+          </h1>
+          <p class="lead">
+            리빙·뷰티·식품·쿠팡·패션·오프라인 매장까지, 업종별로 무엇을 먼저 손보면 노출과 유입이 움직이는지
+            정리했습니다. 아래에서 내 스토어와 가까운 사례를 먼저 확인해 보세요.
+          </p>
+          <div class="cta-row">
+            <a href="#diagnose" class="btn btn-emerald">원클릭 고민 체크 ↓</a>
+            <a href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener" class="btn btn-kakao">오픈카톡 무료 진단</a>
+          </div>
+          <p class="cta-note">
+            <span class="cta-note-ico" aria-hidden="true">🎁</span>
+            <span>(상담만 받아도 상품 찜 무료 제공) · 선착순 5명</span>
+          </p>
+        </div>
+        <div class="hero-visual-wrap">
+          <div class="hero-visual-frame">
+            <img src="hero-visual.png" alt="업종별 노출 변화 3D 비주얼" />
+          </div>
+          <div class="hero-float-badge">
+            <small>업종별 병목 진단</small>
+            <strong>먼저 손볼 지점부터</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 사례 상세 -->
+    <section class="dark-sec">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="eyebrow">REFERENCE MODEL</span>
+          <h2>업종별 Before / After 상세</h2>
+          <p>각 사례는 순위·유입이 움직이는 구조를 설명하기 위한 예시 모델입니다.</p>
+        </div>
+
+        <div class="case-grid" style="grid-template-columns:1fr;">
+
+          <article class="case-detail reveal">
+            <div class="case-detail-top">
+              <div>
+                <span class="case-cat">리빙 · 주방용품</span>
+                <h3>스마트스토어 4페이지 → 1페이지</h3>
+                <p class="case-sub">세부 키워드 재정비 + 리워드 유입 분산 운영</p>
+              </div>
+              <div class="rank-flow">
+                <span class="rank-pill before">4페이지</span>
+                <span class="flow-txt">→</span>
+                <span class="rank-pill after">1페이지</span>
+              </div>
+            </div>
+            <div class="ba-pair">
+              <div class="ba-mini before">
+                <span class="lbl">BEFORE</span>
+                <p>대표 키워드에만 상품명을 맞춰 경쟁이 센 구간에서 계속 밀림. 유입이 거의 없어 순위가 오를 신호 자체가 없는 상태.</p>
+              </div>
+              <div class="ba-mini after">
+                <span class="lbl">AFTER</span>
+                <p>경쟁도 낮은 세부 키워드부터 상품명·태그를 재배치하고, 유입을 일별로 나눠 넣어 반응 지표를 안정적으로 축적.</p>
+              </div>
+            </div>
+            <ul class="work-list">
+              <li><b>01</b> 카테고리·속성값 정비와 중복 키워드 제거</li>
+              <li><b>02</b> 세부 키워드 3종 우선 공략, 상품명 순서 재배치</li>
+              <li><b>03</b> 리워드 유입 일별 분산 + 찜 유도 문구 적용</li>
+              <li><b>04</b> 상세페이지 상단에 배송·교환·후기 요약 재배치</li>
+            </ul>
+            <div class="case-foot">
+              <span class="chip-inline">유입 지수 1.7배 예시</span>
+              <span class="chip-inline">찜 반응 확보</span>
+              <span class="chip-inline">주간 순위 리포트</span>
+            </div>
+          </article>
+
+          <article class="case-detail reveal">
+            <div class="case-detail-top">
+              <div>
+                <span class="case-cat">뷰티 · 스킨케어</span>
+                <h3>스마트스토어 + 쿠팡 동시 노출</h3>
+                <p class="case-sub">체험단 후기 확산 + 양 채널 상세페이지 이원화</p>
+              </div>
+              <div class="rank-flow">
+                <span class="rank-pill before">3페이지</span>
+                <span class="flow-txt">→</span>
+                <span class="rank-pill after">1페이지</span>
+              </div>
+            </div>
+            <div class="ba-pair">
+              <div class="ba-mini before">
+                <span class="lbl">BEFORE</span>
+                <p>후기가 적어 ‘믿고 살 근거’가 부족했고, 같은 상세페이지를 두 채널에 그대로 써서 쿠팡에서는 전환이 더뎠음.</p>
+              </div>
+              <div class="ba-mini after">
+                <span class="lbl">AFTER</span>
+                <p>체험단 후기로 검색 신뢰도를 채우고, 네이버는 성분·사용법 중심, 쿠팡은 배송·가격·리뷰 중심으로 상세를 나눠 운영.</p>
+              </div>
+            </div>
+            <ul class="work-list">
+              <li><b>01</b> 성분·피부 타입 키워드로 포스팅 가이드 설계</li>
+              <li><b>02</b> 블로그·인스타 체험단 후기 2차 활용(상세·SNS)</li>
+              <li><b>03</b> 쿠팡 아이템위너 조건 점검 및 대표 이미지 교체</li>
+              <li><b>04</b> 리뷰·평점 관리 루틴 수립</li>
+            </ul>
+            <div class="case-foot">
+              <span class="chip-inline">리뷰 모수 2.4배 예시</span>
+              <span class="chip-inline">양 채널 동시 노출</span>
+              <span class="chip-inline">포토리뷰 비중 개선</span>
+            </div>
+          </article>
+
+          <article class="case-detail reveal">
+            <div class="case-detail-top">
+              <div>
+                <span class="case-cat">식품 · 건강기능</span>
+                <h3>5페이지 → 2페이지, 반응 지표 축적</h3>
+                <p class="case-sub">리워드·오퍼월 체험형 유입 + 재구매 동선</p>
+              </div>
+              <div class="rank-flow">
+                <span class="rank-pill before">5페이지</span>
+                <span class="flow-txt">→</span>
+                <span class="rank-pill after">2페이지</span>
+              </div>
+            </div>
+            <div class="ba-pair">
+              <div class="ba-mini before">
+                <span class="lbl">BEFORE</span>
+                <p>효능 표현 규제를 피하려다 상품 장점이 흐려지고, 유입이 없어 체류·찜 지표가 계속 0에 가까웠음.</p>
+              </div>
+              <div class="ba-mini after">
+                <span class="lbl">AFTER</span>
+                <p>표현 가능한 범위 안에서 섭취 상황·후기 중심으로 카피를 다시 쓰고, 체험형 유입으로 체류·찜 지표를 축적.</p>
+              </div>
+            </div>
+            <ul class="work-list">
+              <li><b>01</b> 표현 규정에 맞춘 상세 카피·이미지 재작성</li>
+              <li><b>02</b> 오퍼월 유입 시간대 분산 및 일별 상한 설정</li>
+              <li><b>03</b> 정기구매·재구매 안내 동선 추가</li>
+              <li><b>04</b> 후기 요약 블록을 상세 상단에 배치</li>
+            </ul>
+            <div class="case-foot">
+              <span class="chip-inline">재방문 지수 1.9배 예시</span>
+              <span class="chip-inline">체류시간 개선</span>
+              <span class="chip-inline">정기구매 동선</span>
+            </div>
+          </article>
+
+          <article class="case-detail reveal">
+            <div class="case-detail-top">
+              <div>
+                <span class="case-cat">쿠팡 로켓그로스</span>
+                <h3>2페이지 → 1페이지, 아이템위너 확보</h3>
+                <p class="case-sub">가격·배송 조건 정리 + 검색광고 효율 개선</p>
+              </div>
+              <div class="rank-flow">
+                <span class="rank-pill before">2페이지</span>
+                <span class="flow-txt">→</span>
+                <span class="rank-pill after">1페이지</span>
+              </div>
+            </div>
+            <div class="ba-pair">
+              <div class="ba-mini before">
+                <span class="lbl">BEFORE</span>
+                <p>동일 상품을 파는 다른 판매자에 비해 배송·가격 조건이 불리해 대표 상품 자리를 계속 내줌. 광고만 돌아가는 상태.</p>
+              </div>
+              <div class="ba-mini after">
+                <span class="lbl">AFTER</span>
+                <p>마진이 남는 범위에서 조건을 재정리하고, 클릭만 나오던 광고 키워드를 정리해 전환 중심으로 재편.</p>
+              </div>
+            </div>
+            <ul class="work-list">
+              <li><b>01</b> 아이템위너 조건(가격·배송·재고) 비교 점검</li>
+              <li><b>02</b> 대표 이미지·상품명 첫 문구 교체</li>
+              <li><b>03</b> 쿠팡 검색광고 키워드 정리 및 입찰 조정</li>
+              <li><b>04</b> 리뷰·평점 관리와 반품 사유 분석</li>
+            </ul>
+            <div class="case-foot">
+              <span class="chip-inline">구매전환 지수 1.3배 예시</span>
+              <span class="chip-inline">광고 낭비 클릭 감소</span>
+              <span class="chip-inline">아이템위너 확보</span>
+            </div>
+          </article>
+
+          <article class="case-detail reveal">
+            <div class="case-detail-top">
+              <div>
+                <span class="case-cat">패션 · 잡화</span>
+                <h3>숏폼·SNS로 신규 고객 유입</h3>
+                <p class="case-sub">15초 숏폼 6편 + 릴스·틱톡 동시 배포</p>
+              </div>
+              <div class="rank-flow">
+                <span class="rank-pill before">검색 의존</span>
+                <span class="flow-txt">→</span>
+                <span class="rank-pill after">다채널 유입</span>
+              </div>
+            </div>
+            <div class="ba-pair">
+              <div class="ba-mini before">
+                <span class="lbl">BEFORE</span>
+                <p>광고와 검색 유입에만 의존해 신규 고객이 늘지 않고, 상품 사진만으로는 차별점이 전달되지 않음.</p>
+              </div>
+              <div class="ba-mini after">
+                <span class="lbl">AFTER</span>
+                <p>착용·사용 장면을 15초로 만들어 여러 채널에 배포하고, 프로필·고정 댓글로 상품 페이지까지 동선을 연결.</p>
+              </div>
+            </div>
+            <ul class="work-list">
+              <li><b>01</b> 후킹 대본 6종 제작, 세로 비율 통일</li>
+              <li><b>02</b> 쇼츠·릴스·틱톡·클립 동시 배포</li>
+              <li><b>03</b> 프로필 링크·고정 댓글 유입 동선 구축</li>
+              <li><b>04</b> 반응 좋은 소재를 광고 소재로 재활용</li>
+            </ul>
+            <div class="case-foot">
+              <span class="chip-inline">채널 유입 다변화</span>
+              <span class="chip-inline">콘텐츠 재활용</span>
+              <span class="chip-inline">브랜드 인지 개선</span>
+            </div>
+          </article>
+
+          <article class="case-detail reveal">
+            <div class="case-detail-top">
+              <div>
+                <span class="case-cat">오프라인 매장 · 병원</span>
+                <h3>플레이스 저장·리뷰·지역 키워드</h3>
+                <p class="case-sub">대표 키워드 세팅 + 지역 블로그 체험단 연계</p>
+              </div>
+              <div class="rank-flow">
+                <span class="rank-pill before">지역 5위권 밖</span>
+                <span class="flow-txt">→</span>
+                <span class="rank-pill after">지역 상위 노출</span>
+              </div>
+            </div>
+            <div class="ba-pair">
+              <div class="ba-mini before">
+                <span class="lbl">BEFORE</span>
+                <p>플레이스 정보가 오래된 상태로 사진·메뉴·소식이 비어 있고, 저장·리뷰 반응이 없어 지역 검색에서 밀림.</p>
+              </div>
+              <div class="ba-mini after">
+                <span class="lbl">AFTER</span>
+                <p>대표·세부 키워드를 다시 잡고 사진·메뉴·소식을 갱신, 저장 유도와 방문자 리뷰 관리 루틴으로 반응을 축적.</p>
+              </div>
+            </div>
+            <ul class="work-list">
+              <li><b>01</b> 대표 키워드·카테고리·영업정보 정비</li>
+              <li><b>02</b> 메뉴·가격·소식 주기 업데이트</li>
+              <li><b>03</b> 저장하기·알림받기 유도 문구 적용</li>
+              <li><b>04</b> 지역 블로그 체험단으로 검색 결과 보강</li>
+            </ul>
+            <div class="case-foot">
+              <span class="chip-inline">지역 검색 노출 개선</span>
+              <span class="chip-inline">저장·리뷰 반응 증가</span>
+              <span class="chip-inline">방문 전환 동선</span>
+            </div>
+          </article>
+        </div>
+
+        <p class="case-note reveal">
+          <strong>※ 중요한 안내</strong> — 위 사례의 업종·개선 방향은 상위노출랩이 실제로 다루는 작업 유형을 설명하기 위한 것이며,
+          표시된 순위·지수는 특정 고객사의 실측 성과가 아닌 <strong>‘내부 최적화 기준 예시 모델’</strong>입니다.
+          실제 결과는 상품·카테고리·경쟁도·예산·시즌에 따라 달라지며, 특정 순위나 매출을 보장하지 않습니다.
+        </p>
+      </div>
+    </section>
+
+    <!-- 원클릭 진단 -->
+    <section id="diagnose" class="white-sec">
+      <div class="container">
+        <div class="dx-card reveal" data-dx style="margin-bottom:0;">
+          <div class="dx-head">
+            <div>
+              <span class="eyebrow" style="color:#6ee7b7;">ONE-CLICK DIAGNOSIS</span>
+              <h3>지금 가장 급한 고민을 눌러보세요</h3>
+              <p>글 쓰지 않아도 됩니다. 버튼 하나면 맞춤 진단 포인트 3가지를 바로 보여드립니다.</p>
+            </div>
+            <span class="dx-free">🎁 상담만 받아도 상품 찜 무료</span>
+          </div>
+
+          <div class="dx-chips" role="group" aria-label="스토어 고민 선택">
+            <button class="dx-chip" type="button" data-dx-key="rank">🔍 노출 자체가 안 돼요</button>
+            <button class="dx-chip" type="button" data-dx-key="click">🛒 클릭은 되는데 구매가 없어요</button>
+            <button class="dx-chip" type="button" data-dx-key="both">📦 쿠팡/스토어 동시 세팅</button>
+            <button class="dx-chip" type="button" data-dx-key="launch">🚀 신규 런칭 초기 부스팅</button>
+          </div>
+
+          <p class="dx-empty" data-dx-empty>위 버튼을 누르면 이 자리에 진단 포인트가 표시됩니다.</p>
+
+          <div class="dx-panel" data-dx-panel="rank" data-dx-label="노출 자체가 안 돼요">
+            <h4>“검색해도 내 상품이 안 보여요”</h4>
+            <p class="dx-sum">노출이 0에 가까운 경우는 대부분 키워드·카테고리·상품명 구조에서 막혀 있습니다.</p>
+            <ul class="dx-points">
+              <li><span class="num">1</span><span><strong>키워드 적합도 점검</strong> — 검색량 대비 경쟁도가 낮은 ‘이길 수 있는 세부 키워드’부터 잡아야 노출이 시작됩니다.</span></li>
+              <li><span class="num">2</span><span><strong>상품명·카테고리·속성 정비</strong> — 네이버·쿠팡 검색 로직이 읽는 상품명, 태그, 카테고리를 실제 검색어 기준으로 다시 씁니다.</span></li>
+              <li><span class="num">3</span><span><strong>초기 반응 데이터 만들기</strong> — 유입·찜·리뷰가 없으면 순위가 오르지 않으므로, 소량 분산 유입과 찜 확보로 첫 신호를 만듭니다.</span></li>
+            </ul>
+            <div class="dx-actions">
+              <a class="btn btn-kakao" href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener" data-dx-send>선택 내용으로 오픈카톡 상담하기</a>
+              <span class="dx-notice" role="status"></span>
+            </div>
+          </div>
+
+          <div class="dx-panel" data-dx-panel="click" data-dx-label="클릭은 되는데 구매가 없어요">
+            <h4>“유입은 있는데 주문이 안 나와요”</h4>
+            <p class="dx-sum">클릭 이후 이탈은 썸네일·가격·상세페이지·후기 중 어딘가에서 막혀 있다는 신호입니다.</p>
+            <ul class="dx-points">
+              <li><span class="num">1</span><span><strong>썸네일·상품명 첫인상</strong> — 검색 결과에서 경쟁 상품과 나란히 놓였을 때 눌릴 이유(혜택·수치·차별점)를 첫 줄에 배치합니다.</span></li>
+              <li><span class="num">2</span><span><strong>상세페이지 구매 동선</strong> — 문제 제기 → 해결 → 후기 → 혜택 순서로 스크롤 구간마다 이탈 지점을 줄입니다.</span></li>
+              <li><span class="num">3</span><span><strong>후기·찜·재구매 신호</strong> — 체험단 후기와 찜 수를 함께 쌓아 ‘사도 되는 상품’이라는 판단 근거를 만들어 드립니다.</span></li>
+            </ul>
+            <div class="dx-actions">
+              <a class="btn btn-kakao" href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener" data-dx-send>선택 내용으로 오픈카톡 상담하기</a>
+              <span class="dx-notice" role="status"></span>
+            </div>
+          </div>
+
+          <div class="dx-panel" data-dx-panel="both" data-dx-label="쿠팡/스토어 동시 세팅">
+            <h4>“스마트스토어와 쿠팡을 같이 하고 싶어요”</h4>
+            <p class="dx-sum">채널마다 검색 로직이 달라서, 같은 상품도 키워드와 상세 구조를 따로 잡아야 합니다.</p>
+            <ul class="dx-points">
+              <li><span class="num">1</span><span><strong>채널별 키워드 분리</strong> — 네이버는 적합도·인기도·신뢰도, 쿠팡은 아이템위너·리뷰·배송 조건 중심으로 키워드를 나눕니다.</span></li>
+              <li><span class="num">2</span><span><strong>재고·가격·배송 정합성</strong> — 두 채널의 가격과 배송 조건이 어긋나면 전환이 새므로, 운영 기준을 먼저 맞춥니다.</span></li>
+              <li><span class="num">3</span><span><strong>리뷰·유입 자산 공유</strong> — 한 번 만든 후기 콘텐츠와 숏폼을 양 채널에 맞게 재가공해 제작 비용을 줄입니다.</span></li>
+            </ul>
+            <div class="dx-actions">
+              <a class="btn btn-kakao" href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener" data-dx-send>선택 내용으로 오픈카톡 상담하기</a>
+              <span class="dx-notice" role="status"></span>
+            </div>
+          </div>
+
+          <div class="dx-panel" data-dx-panel="launch" data-dx-label="신규 런칭 초기 부스팅">
+            <h4>“이제 막 런칭해서 아무 데이터가 없어요”</h4>
+            <p class="dx-sum">신규 상품은 첫 2~4주의 신호가 순위를 좌우합니다. 순서를 정확히 밟는 것이 핵심입니다.</p>
+            <ul class="dx-points">
+              <li><span class="num">1</span><span><strong>런칭 전 세팅</strong> — 카테고리·상품명·옵션·배송정책을 먼저 정리하고, 판매 시작 전에 검색 구조를 완성합니다.</span></li>
+              <li><span class="num">2</span><span><strong>초기 유입·찜 확보</strong> — 리워드·오퍼월 유입과 찜 이벤트로 ‘관심 있는 상품’이라는 신호를 초기에 쌓습니다.</span></li>
+              <li><span class="num">3</span><span><strong>후기·숏폼 동시 전개</strong> — 체험단 후기와 15초 숏폼을 함께 배포해 검색 결과와 SNS에서 동시에 발견되게 만듭니다.</span></li>
+            </ul>
+            <div class="dx-actions">
+              <a class="btn btn-kakao" href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener" data-dx-send>선택 내용으로 오픈카톡 상담하기</a>
+              <span class="dx-notice" role="status"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="deep-sec">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>내 상품은 어디에서 막혀 있는지<br />무료로 짚어드립니다</h2>
+          <p>스토어 링크와 대표 키워드만 보내주세요. 상담만 받아도 선착순 5명 ‘상품 찜’ 무료 지원.</p>
+          <div class="cta-row">
+            <a href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener" class="btn btn-kakao">오픈카톡 무료 진단</a>
+            <a href="tel:010-7612-9292" class="btn btn-emerald">010-7612-9292 전화</a>
+          </div>
+          <p class="cta-note">
+            <span class="cta-note-ico" aria-hidden="true">🎁</span>
+            <span>(상담만 받아도 상품 찜 무료 제공) · 카톡 ID godtrip1</span>
+          </p>
+        </div>
+
+        <div class="next-links" style="margin-top: 26px;">
+          <a class="next-link" href="shopping.html">
+            <small>SHOPPING</small><strong>쇼핑몰 상위노출</strong>
+            <span>스마트스토어·쿠팡 로직과 실행 가이드</span><span class="go">보기 →</span>
+          </a>
+          <a class="next-link" href="marketing.html">
+            <small>MARKETING</small><strong>종합 마케팅</strong>
+            <span>체험단·숏폼·검색광고·언론까지</span><span class="go">보기 →</span>
+          </a>
+          <a class="next-link" href="index.html#contact">
+            <small>CONTACT</small><strong>무료 진단 신청서</strong>
+            <span>스토어 정보를 적어 바로 상담받기</span><span class="go">신청하기 →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener" class="floating-cta">💬 무료 상담하기</a>
+
+  <div class="mobile-cta" aria-label="빠른 상담">
+    <a class="mcta-btn mcta-tel" href="tel:010-7612-9292">
+      <span class="mcta-ico" aria-hidden="true">📞</span>
+      <span class="mcta-txt"><strong>전화 상담</strong><small>010-7612-9292</small></span>
+    </a>
+    <a class="mcta-btn mcta-kakao" href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener">
+      <span class="mcta-ico" aria-hidden="true">💬</span>
+      <span class="mcta-txt"><strong>오픈카톡 무료상담</strong><small>상품 찜 무료 제공</small></span>
+    </a>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">
+            <img src="logo.png" alt="상위노출랩 로고" />
+            <span>상위노출랩</span>
+          </div>
+          <p class="footer-desc">
+            쇼핑몰 상위노출을 중심으로 리워드·체험단·숏폼·검색광고·언론송출까지
+            필요한 모든 온라인 마케팅을 한 팀처럼 실행하는 종합 마케팅 대행사입니다.
+          </p>
+          <span class="free-badge">🎁 상담만 받아도 상품 찜 무료 제공 (선착순 5명)</span>
+        </div>
+        <div class="footer-col">
+          <h4>바로가기</h4>
+          <ul>
+            <li><a href="index.html">홈</a></li>
+            <li><a href="about.html">회사소개</a></li>
+            <li><a href="shopping.html">쇼핑몰 상위노출</a></li>
+            <li><a href="marketing.html">종합 마케팅</a></li>
+            <li><a href="cases.html">업종별 사례</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>상담 채널</h4>
+          <ul>
+            <li><a href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener">오픈카톡 상담방</a></li>
+            <li><a href="tel:010-7612-9292">직통 010-7612-9292</a></li>
+            <li><span>카톡 ID godtrip1</span></li>
+            <li><a href="http://pf.kakao.com/_VixavX" target="_blank" rel="noopener">카카오톡 채널</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 상위노출랩 (TopRankLab). All rights reserved.</div>
+        <div class="footer-contact">
+          <a href="tel:010-7612-9292">010-7612-9292</a>
+          <a href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener">오픈카톡 상담</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

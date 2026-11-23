@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>쇼핑몰 상위노출 | 상위노출랩 — 스마트스토어 · 쿠팡 검색 최적화</title>
+  <meta name="description" content="네이버 스마트스토어 적합도·인기도·신뢰도와 쿠팡 아이템위너 구조를 기준으로 상품을 검색 1페이지에 올리는 실행 가이드. 키워드 선정, 상품명·태그, 트래픽·찜·리뷰·SEO, 리워드·오퍼월 유입까지 상위노출랩이 정리했습니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="쇼핑몰 상위노출 | 상위노출랩" />
+  <meta property="og:description" content="스마트스토어·쿠팡 검색 로직과 트래픽·찜·리뷰·SEO 실행 가이드." />
+  <meta property="og:url" content="https://topranklab.github.io/shopping.html" />
+  <meta property="og:image" content="https://topranklab.github.io/commerce-visual.png" />
+  <link rel="canonical" href="https://topranklab.github.io/shopping.html" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <div class="promo-bar" id="promoBar" role="region" aria-label="선착순 혜택 안내">
+    <div class="container promo-inner">
+      <a class="promo-link" href="index.html#contact">
+        <span class="promo-gift" aria-hidden="true">🎁</span>
+        <span>상담만 받아도 <span class="promo-key">선착순 5명</span> '상품 찜' 무료 제공</span>
+        <span class="promo-go">· 지금 바로 무료 진단 받기 →</span>
+      </a>
+      <button class="promo-close" id="promoClose" type="button" aria-label="배너 닫기">×</button>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="상위노출랩 로고" />
+        <span>상위노출랩</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="about.html">회사소개</a></li>
+        <li><a href="shopping.html" class="active">쇼핑몰 상위노출</a></li>
+        <li><a href="marketing.html">종합 마케팅</a></li>
+        <li><a href="cases.html">업종별 사례</a></li>
+        <li><a href="index.html#contact">무료 진단</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener" class="nav-cta">무료 상담하기</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="모바일 메뉴">
+      <a href="index.html">홈</a>
+      <a href="about.html">회사소개</a>
+      <a href="shopping.html">쇼핑몰 상위노출</a>
+      <a href="marketing.html">종합 마케팅</a>
+      <a href="cases.html">업종별 사례</a>
+      <a href="index.html#contact">무료 진단</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+        <div>
+          <nav class="crumb" aria-label="현재 위치">
+            <a href="index.html">홈</a><span class="sep">/</span><span class="now">쇼핑몰 상위노출</span>
+          </nav>
+          <span class="pill-badge">SHOPPING · 스마트스토어 · 쿠팡</span>
+          <h1>
+            검색 1페이지는<br />
+            <span style="color:#6ee7b7;">키워드 · 유입 · 후기</span>가 같이 움직여야 유지됩니다
+          </h1>
+          <p class="lead">
+            스마트스토어와 쿠팡은 서로 다른 검색 로직을 씁니다. 상위노출랩은 채널별 로직에 맞춰
+            상품명·카테고리·유입·리뷰를 하나의 흐름으로 세팅합니다.
+          </p>
+          <div class="cta-row">
+            <a href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener" class="btn btn-kakao">내 상품 무료 진단</a>
+            <a href="tel:010-7612-9292" class="btn btn-emerald">직통 010-7612-9292</a>
+          </div>
+          <p class="cta-note">
+            <span class="cta-note-ico" aria-hidden="true">🎁</span>
+            <span>(상담만 받아도 상품 찜 무료 제공) · 스토어 링크만 보내주세요</span>
+          </p>
+        </div>
+        <div class="hero-visual-wrap">
+          <div class="hero-visual-frame">
+            <img src="commerce-visual.png" alt="쇼핑몰 상위노출 및 리워드 마케팅 3D 비주얼" />
+          </div>
+          <div class="hero-float-badge">
+            <small>적합도 · 인기도 · 신뢰도</small>
+            <strong>채널별 로직에 맞춘 세팅</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 스마트스토어 로직 -->
+    <section class="dark-sec">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="eyebrow">NAVER SMARTSTORE</span>
+          <h2>네이버 쇼핑 검색은 세 가지를 봅니다</h2>
+          <p>상품명만 바꾸는 것으로는 순위가 오르지 않습니다. 세 축을 동시에 채워야 합니다.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="info-card reveal">
+            <span class="info-ico" aria-hidden="true">🔎</span>
+            <h3>적합도 — 검색어와 얼마나 맞는가</h3>
+            <p>카테고리, 상품명, 속성, 옵션명이 실제 검색어와 얼마나 일치하는지를 봅니다.</p>
+            <ul>
+              <li>메인·세부 키워드 분리 배치</li>
+              <li>카테고리 정확도 점검</li>
+              <li>속성값·옵션명 정비</li>
+            </ul>
+          </div>
+          <div class="info-card reveal">
+            <span class="info-ico" aria-hidden="true">🔥</span>
+            <h3>인기도 — 반응이 얼마나 쌓였는가</h3>
+            <p>클릭·체류·찜·구매 같은 반응 데이터가 쌓여야 순위가 올라가고 유지됩니다.</p>
+            <ul>
+              <li>초기 유입 분산 세팅</li>
+              <li>찜·장바구니 반응 확보</li>
+              <li>구매 전환 흐름 개선</li>
+            </ul>
+          </div>
+          <div class="info-card reveal">
+            <span class="info-ico" aria-hidden="true">🛡️</span>
+            <h3>신뢰도 — 믿고 살 수 있는가</h3>
+            <p>리뷰, 반품·교환 정책, 배송, 판매자 이력이 구매 판단과 노출에 함께 작용합니다.</p>
+            <ul>
+              <li>체험단 후기 확보</li>
+              <li>배송·교환 정책 정비</li>
+              <li>상세페이지 신뢰 요소 보강</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 쿠팡 -->
+    <section id="coupang" class="light-sec">
+      <div class="container">
+        <div class="split reveal">
+          <div class="split-text">
+            <span class="eyebrow">COUPANG</span>
+            <h2>쿠팡은 ‘아이템위너’와 ‘전환’이 기준입니다</h2>
+            <p>
+              쿠팡 검색 결과는 같은 상품을 파는 판매자 중 누가 더 좋은 조건을 제시하는지로 대표 상품(아이템위너)을 정합니다.
+              여기에 리뷰·클릭률·구매 전환이 더해져 노출이 결정됩니다.
+            </p>
+            <ul class="checklist">
+              <li>아이템위너 조건(가격·배송·재고) 점검</li>
+              <li>검색 키워드·카테고리 매칭 확인</li>
+              <li>대표 이미지·상품명 첫 문구 개선</li>
+              <li>리뷰 수·평점 관리</li>
+              <li>로켓그로스·판매자배송 조건 비교</li>
+              <li>쿠팡 검색광고 효율 점검</li>
+            </ul>
+          </div>
+          <div class="split-visual">
+            <img src="commerce-visual.png" alt="쿠팡 상위노출 세팅 3D 비주얼" />
+          </div>
+        </div>
+
+        <div class="note-box reveal" style="margin-top: 24px;">
+          <strong>쿠팡 운영 기준</strong> — 쿠팡은 가격·배송 조건이 순위에 직접 영향을 주므로, 무리한 최저가 경쟁보다
+          마진이 남는 조건에서 이길 수 있는 키워드와 상품 구성부터 정리합니다.
+        </div>
+      </div>
+    </section>
+
+    <!-- 실행 5단계 -->
+    <section class="white-sec">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="eyebrow">EXECUTION</span>
+          <h2>상위노출 실행 5단계</h2>
+          <p>순서를 건너뛰면 광고비만 나가고 순위는 돌아오지 않습니다.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="info-card reveal">
+            <span class="info-ico" aria-hidden="true">1</span>
+            <h3>키워드 발굴</h3>
+            <p>검색량과 경쟁도를 함께 보고, 지금 이길 수 있는 키워드를 3단계(대표·세부·롱테일)로 나눕니다.</p>
+          </div>
+          <div class="info-card reveal">
+            <span class="info-ico" aria-hidden="true">2</span>
+            <h3>상품명 · 태그 정비</h3>
+            <p>중복 키워드와 특수문자를 정리하고, 실제 검색어 순서에 맞춰 상품명을 다시 씁니다.</p>
+          </div>
+          <div class="info-card reveal">
+            <span class="info-ico" aria-hidden="true">3</span>
+            <h3>썸네일 · 상세페이지</h3>
+            <p>검색 결과에서 눌릴 이유와, 클릭 후 이탈하지 않을 구매 동선을 함께 만듭니다.</p>
+          </div>
+          <div class="info-card reveal">
+            <span class="info-ico" aria-hidden="true">4</span>
+            <h3>유입 · 찜 확보</h3>
+            <p>리워드·오퍼월 유입을 분산 세팅하고 찜·장바구니 반응을 함께 쌓습니다.</p>
+          </div>
+          <div class="info-card reveal">
+            <span class="info-ico" aria-hidden="true">5</span>
+            <h3>리뷰 · 유지 관리</h3>
+            <p>체험단 후기와 재구매 흐름을 붙여, 광고를 줄여도 순위가 유지되는 상태를 만듭니다.</p>
+          </div>
+          <div class="info-card reveal" style="background:linear-gradient(160deg,#0a1426,#13233d);border-color:rgba(52,211,153,.4);">
+            <span class="info-ico" aria-hidden="true">🎁</span>
+            <h3 style="color:#fff;">상품 찜 무료 지원</h3>
+            <p style="color:#cbd5e1;">상담만 받아도 선착순 5명에게 상품 찜 작업을 무료로 진행해 드립니다.</p>
+            <div class="cta-row" style="margin-top:12px;">
+              <a href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener" class="btn btn-kakao btn-sm">오픈카톡 신청</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 트래픽·찜·리뷰·SEO 가이드 -->
+    <section class="dark-sec">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="eyebrow">DETAIL GUIDE</span>
+          <h2>트래픽 · 찜 · 리뷰 · SEO 상세 가이드</h2>
+          <p>실제 세팅에서 무엇을 어떤 순서로 손보는지 정리했습니다.</p>
+        </div>
+
+        <div class="table-wrap reveal">
+          <table class="cmp">
+            <thead>
+              <tr>
+                <th>항목</th>
+                <th>무엇을 하나</th>
+                <th>확인하는 지표</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>트래픽</strong></td>
+                <td>리워드·오퍼월 유입을 하루 단위로 분산하고, 검색 유입과 광고 유입의 비중을 조정합니다. 급격한 단일 유입은 오히려 역효과가 날 수 있어 나눠서 넣습니다.</td>
+                <td>유입량 추이, 체류시간, 이탈률</td>
+              </tr>
+              <tr>
+                <td><strong>찜 · 장바구니</strong></td>
+                <td>상세페이지 상단에 혜택·재고·배송 안내를 배치하고, 찜 유도 문구와 이벤트로 반응을 만듭니다.</td>
+                <td>찜 수, 장바구니 전환율</td>
+              </tr>
+              <tr>
+                <td><strong>리뷰 · 후기</strong></td>
+                <td>체험단 포스팅 가이드로 키워드 노출과 사진 품질을 맞추고, 상세페이지에 후기 요약을 재배치합니다.</td>
+                <td>리뷰 수, 평점, 포토리뷰 비중</td>
+              </tr>
+              <tr>
+                <td><strong>상품 SEO</strong></td>
+                <td>상품명·태그·속성·카테고리를 검색어 기준으로 정비하고, 중복·과장 표현을 정리합니다.</td>
+                <td>노출 키워드 수, 순위</td>
+              </tr>
+              <tr>
+                <td><strong>광고</strong></td>
+                <td>파워링크·쇼핑검색광고·쿠팡광고를 전환 기준으로 운영하고, 효율이 낮은 키워드는 정리합니다.</td>
+                <td>클릭률, ROAS, 전환수</td>
+              </tr>
+              <tr>
+                <td><strong>유지 관리</strong></td>
+                <td>순위가 내려가는 신호(재고·가격·경쟁사 프로모션)를 주간으로 점검해 보정합니다.</td>
+                <td>주간 순위 변동</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="case-note reveal">
+          <strong>※ 안내</strong> — 위 지표는 운영 판단 기준이며, 특정 순위나 매출을 보장하지 않습니다.
+          결과는 상품·카테고리·경쟁도·예산에 따라 달라지고, 상담 시 현재 상태 기준으로 목표를 함께 정합니다.
+        </p>
+      </div>
+    </section>
+
+    <!-- 리워드 -->
+    <section id="reward" class="light-sec">
+      <div class="container">
+        <div class="split rev reveal">
+          <div class="split-text">
+            <span class="eyebrow">REWARD · OFFERWALL</span>
+            <h2>리워드 · 오퍼월 유입은 ‘양’보다 ‘배분’입니다</h2>
+            <p>
+              실사용자 참여 기반 유입은 상품 반응 지표를 만드는 데 효과적이지만,
+              한 번에 몰아 넣으면 오히려 비정상 패턴으로 보일 수 있습니다.
+              상위노출랩은 일별·시간대별로 나눠 자연스러운 흐름을 만듭니다.
+            </p>
+            <ul class="checklist">
+              <li>카테고리별 적정 유입량 설계</li>
+              <li>일별 분산 및 시간대 배분</li>
+              <li>체류·재방문 흐름 설계</li>
+              <li>스마트스토어·쿠팡·플레이스 연계</li>
+            </ul>
+          </div>
+          <div class="split-visual">
+            <img src="media-visual.png" alt="리워드 유입 캠페인 3D 비주얼" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="deep-sec">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>내 상품이 지금 몇 페이지에 있는지<br />먼저 확인해 드립니다</h2>
+          <p>스토어 링크와 대표 키워드만 보내주세요. 진단만 받아도 선착순 5명 ‘상품 찜’ 무료 지원.</p>
+          <div class="cta-row">
+            <a href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener" class="btn btn-kakao">오픈카톡 무료 진단</a>
+            <a href="tel:010-7612-9292" class="btn btn-emerald">010-7612-9292 전화</a>
+          </div>
+          <p class="cta-note">
+            <span class="cta-note-ico" aria-hidden="true">🎁</span>
+            <span>(상담만 받아도 상품 찜 무료 제공) · 카톡 ID godtrip1</span>
+          </p>
+        </div>
+
+        <div class="next-links" style="margin-top: 26px;">
+          <a class="next-link" href="index.html#contact">
+            <small>DIAGNOSIS</small><strong>원클릭 고민 체크</strong>
+            <span>노출·구매·쿠팡 세팅·신규 런칭 중 선택</span><span class="go">진단하러 가기 →</span>
+          </a>
+          <a class="next-link" href="cases.html">
+            <small>REFERENCE</small><strong>업종별 Before / After</strong>
+            <span>리빙·뷰티·식품·쿠팡 사례 예시 모델</span><span class="go">보기 →</span>
+          </a>
+          <a class="next-link" href="marketing.html">
+            <small>NEXT</small><strong>종합 마케팅</strong>
+            <span>체험단·숏폼·검색광고·언론까지</span><span class="go">보기 →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener" class="floating-cta">💬 무료 상담하기</a>
+
+  <div class="mobile-cta" aria-label="빠른 상담">
+    <a class="mcta-btn mcta-tel" href="tel:010-7612-9292">
+      <span class="mcta-ico" aria-hidden="true">📞</span>
+      <span class="mcta-txt"><strong>전화 상담</strong><small>010-7612-9292</small></span>
+    </a>
+    <a class="mcta-btn mcta-kakao" href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener">
+      <span class="mcta-ico" aria-hidden="true">💬</span>
+      <span class="mcta-txt"><strong>오픈카톡 무료상담</strong><small>상품 찜 무료 제공</small></span>
+    </a>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">
+            <img src="logo.png" alt="상위노출랩 로고" />
+            <span>상위노출랩</span>
+          </div>
+          <p class="footer-desc">
+            쇼핑몰 상위노출을 중심으로 리워드·체험단·숏폼·검색광고·언론송출까지
+            필요한 모든 온라인 마케팅을 한 팀처럼 실행하는 종합 마케팅 대행사입니다.
+          </p>
+          <span class="free-badge">🎁 상담만 받아도 상품 찜 무료 제공 (선착순 5명)</span>
+        </div>
+        <div class="footer-col">
+          <h4>바로가기</h4>
+          <ul>
+            <li><a href="index.html">홈</a></li>
+            <li><a href="about.html">회사소개</a></li>
+            <li><a href="shopping.html">쇼핑몰 상위노출</a></li>
+            <li><a href="marketing.html">종합 마케팅</a></li>
+            <li><a href="cases.html">업종별 사례</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>상담 채널</h4>
+          <ul>
+            <li><a href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener">오픈카톡 상담방</a></li>
+            <li><a href="tel:010-7612-9292">직통 010-7612-9292</a></li>
+            <li><span>카톡 ID godtrip1</span></li>
+            <li><a href="http://pf.kakao.com/_VixavX" target="_blank" rel="noopener">카카오톡 채널</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 상위노출랩 (TopRankLab). All rights reserved.</div>
+        <div class="footer-contact">
+          <a href="tel:010-7612-9292">010-7612-9292</a>
+          <a href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener">오픈카톡 상담</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
