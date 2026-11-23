@@ -11,23 +11,22 @@
   <meta property="og:title" content="상위노출랩 | 쇼핑몰 상위노출 · 리워드 · 종합 마케팅 실행사" />
   <meta property="og:description" content="검색 1페이지로 올리는 맞춤 순위 최적화 전략. 스마트스토어·쿠팡·종합 마케팅까지 상위노출랩과 함께하세요." />
   <meta property="og:url" content="https://topranklab.github.io/" />
-  <meta property="og:image" content="https://topranklab.github.io/logo.png" />
+  <meta property="og:image" content="https://topranklab.github.io/hero-visual.png" />
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg-dark: #060c17;
-      --bg-navy: #0b1629;
-      --bg-card-dark: #111f38;
+      --bg-dark: #050a14;
+      --bg-navy: #0a1426;
+      --bg-card-dark: #101d35;
       --emerald: #10b981;
       --emerald-glow: #34d399;
       --emerald-dark: #059669;
       --sky: #38bdf8;
       --kakao: #fee500;
       --bg-light: #f8fafc;
-      --surface: #ffffff;
       --text-dark: #0f172a;
       --text-muted: #475569;
       --border-light: #e2e8f0;
@@ -47,12 +46,24 @@
     }
     a { color: inherit; text-decoration: none; }
     button { font-family: inherit; cursor: pointer; }
+    img { display: block; max-width: 100%; }
 
     .container {
       width: 100%;
-      max-width: 1160px;
+      max-width: 1180px;
       margin: 0 auto;
       padding: 0 20px;
+    }
+
+    /* Reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     /* Header */
@@ -60,15 +71,15 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(6, 12, 23, 0.92);
-      backdrop-filter: blur(14px);
+      background: rgba(5, 10, 20, 0.9);
+      backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border-dark);
     }
     .nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 70px;
+      height: 72px;
       gap: 16px;
     }
     .brand {
@@ -76,46 +87,42 @@
       align-items: center;
       gap: 10px;
       font-weight: 900;
-      font-size: 1.15rem;
+      font-size: 1.18rem;
       letter-spacing: -0.02em;
       white-space: nowrap;
     }
     .brand img {
-      width: 36px;
-      height: 36px;
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
       object-fit: cover;
-      border: 1.5px solid rgba(16, 185, 129, 0.7);
+      border: 1.5px solid rgba(16, 185, 129, 0.75);
     }
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 26px;
       list-style: none;
       font-size: 0.93rem;
       font-weight: 600;
       color: #cbd5e1;
     }
     .nav-links a:hover { color: var(--emerald-glow); }
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
     .nav-cta {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 10px 18px;
+      padding: 10px 20px;
       border-radius: 999px;
-      background: var(--emerald);
+      background: linear-gradient(135deg, var(--emerald), #0ea5e9);
       color: #fff;
       font-weight: 800;
       font-size: 0.88rem;
       white-space: nowrap;
-      transition: background 0.2s, transform 0.15s;
+      transition: transform 0.15s, filter 0.2s;
     }
-    .nav-cta:hover { background: var(--emerald-dark); transform: translateY(-1px); }
+    .nav-cta:hover { transform: translateY(-1px); filter: brightness(1.06); }
     .menu-toggle {
       display: none;
       background: rgba(255,255,255,0.08);
@@ -146,37 +153,37 @@
     .hero {
       position: relative;
       overflow: hidden;
-      padding: 78px 0 74px;
+      padding: 84px 0 76px;
       background:
-        radial-gradient(circle at 14% 20%, rgba(16, 185, 129, 0.22), transparent 44%),
-        radial-gradient(circle at 86% 24%, rgba(56, 189, 248, 0.16), transparent 44%),
+        radial-gradient(circle at 12% 22%, rgba(16, 185, 129, 0.22), transparent 44%),
+        radial-gradient(circle at 86% 24%, rgba(56, 189, 248, 0.18), transparent 44%),
         linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-navy) 100%);
     }
     .hero-inner {
       display: grid;
-      grid-template-columns: 1.1fr 0.95fr;
-      gap: 38px;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 44px;
       align-items: center;
     }
     .pill-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 7px 15px;
+      padding: 7px 16px;
       border-radius: 999px;
       background: rgba(16, 185, 129, 0.14);
       border: 1px solid rgba(16, 185, 129, 0.45);
       color: #6ee7b7;
       font-size: 0.85rem;
       font-weight: 700;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
     .hero h1 {
-      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-size: clamp(2.1rem, 4.7vw, 3.4rem);
       font-weight: 900;
-      line-height: 1.24;
+      line-height: 1.22;
       letter-spacing: -0.03em;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
     .hero h1 .accent {
       background: linear-gradient(90deg, #34d399, #38bdf8);
@@ -185,15 +192,11 @@
     }
     .hero p {
       color: #cbd5e1;
-      font-size: 1.04rem;
-      max-width: 550px;
-      margin-bottom: 28px;
+      font-size: 1.06rem;
+      max-width: 540px;
+      margin-bottom: 30px;
     }
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
     .btn {
       display: inline-flex;
       align-items: center;
@@ -219,106 +222,93 @@
     }
     .btn-ghost:hover { background: rgba(255, 255, 255, 0.14); }
 
-    /* Visual Dashboard in Hero */
-    .viz-board {
-      background: linear-gradient(160deg, rgba(17, 31, 56, 0.96), rgba(10, 20, 38, 0.98));
+    .hero-visual-wrap {
+      position: relative;
+    }
+    .hero-visual-frame {
+      border-radius: 24px;
+      overflow: hidden;
       border: 1px solid rgba(52, 211, 153, 0.35);
-      border-radius: 22px;
-      padding: 24px;
-      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.45);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+      animation: floatY 5s ease-in-out infinite;
     }
-    .viz-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 14px;
-      gap: 10px;
-    }
-    .viz-title {
-      font-size: 0.86rem;
-      font-weight: 800;
-      color: #6ee7b7;
-      letter-spacing: 0.03em;
-    }
-    .viz-badge {
-      font-size: 0.74rem;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(56, 189, 248, 0.16);
-      color: #7dd3fc;
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      white-space: nowrap;
-    }
-    .chart-box {
-      background: rgba(6, 12, 23, 0.75);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+    .hero-visual-frame img { width: 100%; height: auto; }
+    .hero-float-badge {
+      position: absolute;
+      left: -14px;
+      bottom: 20px;
+      background: rgba(10, 20, 38, 0.92);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(52, 211, 153, 0.5);
       border-radius: 14px;
-      padding: 16px 14px 10px;
-      margin-bottom: 14px;
+      padding: 12px 16px;
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
     }
-    .chart-legend {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.78rem;
-      color: #94a3b8;
-      margin-bottom: 8px;
+    .hero-float-badge small { display: block; font-size: 0.74rem; color: #94a3b8; }
+    .hero-float-badge strong { font-size: 0.98rem; color: #34d399; }
+    @keyframes floatY {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
     }
-    .chart-legend strong { color: #34d399; font-size: 0.85rem; }
-    .rank-compare {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      gap: 10px;
-      align-items: center;
-    }
-    .rank-box {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      padding: 12px;
-    }
-    .rank-box.after {
-      background: rgba(16, 185, 129, 0.14);
-      border-color: rgba(16, 185, 129, 0.45);
-    }
-    .rank-box small { display: block; font-size: 0.75rem; color: #94a3b8; margin-bottom: 2px; }
-    .rank-box strong { font-size: 1.08rem; font-weight: 900; }
-    .rank-box.after strong { color: #34d399; }
-    .rank-arrow { color: #34d399; font-weight: 900; font-size: 1.2rem; }
 
-    /* Marquee */
-    .marquee-wrap {
-      background: #091220;
+    /* Rolling Rank Strategy Marquee */
+    .marquee-section {
+      background: #070f1d;
       border-top: 1px solid var(--border-dark);
       border-bottom: 1px solid var(--border-dark);
-      padding: 15px 0;
+      padding: 26px 0;
       overflow: hidden;
     }
     .marquee-track {
       display: flex;
       gap: 16px;
       width: max-content;
-      animation: scrollX 28s linear infinite;
+      animation: scrollX 34s linear infinite;
     }
-    .marquee-pill {
-      padding: 7px 16px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.05);
+    .marquee-track:hover { animation-play-state: paused; }
+    .rank-card {
+      width: 240px;
+      background: rgba(16, 29, 53, 0.9);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 0.86rem;
-      font-weight: 700;
-      color: #e2e8f0;
-      white-space: nowrap;
+      border-radius: 16px;
+      padding: 16px 18px;
+      flex-shrink: 0;
     }
-    .marquee-pill span { color: var(--emerald-glow); margin-right: 6px; }
+    .rank-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .rank-cat {
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: #7dd3fc;
+      background: rgba(56, 189, 248, 0.14);
+      padding: 3px 9px;
+      border-radius: 999px;
+    }
+    .rank-goal {
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: #6ee7b7;
+    }
+    .rank-card strong {
+      display: block;
+      font-size: 0.98rem;
+      margin-bottom: 4px;
+    }
+    .rank-card span {
+      font-size: 0.82rem;
+      color: #94a3b8;
+    }
     @keyframes scrollX {
       from { transform: translateX(0); }
       to { transform: translateX(-50%); }
     }
 
     /* Sections */
-    section { padding: 80px 0; }
+    section { padding: 86px 0; }
     .light-sec { background: var(--bg-light); color: var(--text-dark); }
     .white-sec {
       background: #ffffff;
@@ -329,8 +319,8 @@
     .dark-sec { background: var(--bg-navy); color: #f8fafc; }
     .sec-head {
       text-align: center;
-      max-width: 700px;
-      margin: 0 auto 44px;
+      max-width: 720px;
+      margin: 0 auto 48px;
     }
     .eyebrow {
       display: inline-block;
@@ -342,20 +332,120 @@
     }
     .dark-sec .eyebrow { color: var(--emerald-glow); }
     .sec-head h2 {
-      font-size: clamp(1.6rem, 3.6vw, 2.3rem);
+      font-size: clamp(1.65rem, 3.6vw, 2.4rem);
       font-weight: 900;
-      line-height: 1.3;
+      line-height: 1.28;
       letter-spacing: -0.02em;
       margin-bottom: 12px;
     }
     .sec-head p { font-size: 1rem; color: var(--text-muted); }
     .dark-sec .sec-head p { color: #cbd5e1; }
 
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    /* Showcase Rows (Pullim style with 3D images) */
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 44px;
+      align-items: center;
+      margin-bottom: 56px;
+    }
+    .showcase-grid:last-child { margin-bottom: 0; }
+    .showcase-img {
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+    .showcase-img img { width: 100%; height: auto; }
+    .showcase-text .eyebrow { color: var(--emerald-glow); }
+    .showcase-text h3 {
+      font-size: clamp(1.45rem, 2.8vw, 2rem);
+      font-weight: 900;
+      line-height: 1.32;
+      margin-bottom: 14px;
+    }
+    .showcase-text p { color: #cbd5e1; margin-bottom: 20px; }
+    .feature-pills {
+      display: grid;
+      gap: 10px;
+    }
+    .feature-pill {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 13px;
+      padding: 13px 16px;
+    }
+    .feature-pill strong { display: block; font-size: 0.96rem; color: #6ee7b7; margin-bottom: 2px; }
+    .feature-pill span { font-size: 0.87rem; color: #cbd5e1; }
+
+    /* 8 Solutions + Modal */
     .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
     .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .sol-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+    .sol-tab {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--border-light);
+      background: #fff;
+      color: var(--text-muted);
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    .sol-tab.active {
+      background: var(--bg-navy);
+      color: #fff;
+      border-color: var(--bg-navy);
+    }
+    .sol-card {
+      background: #fff;
+      border: 1px solid var(--border-light);
+      border-radius: 18px;
+      padding: 24px 20px;
+      box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+    .sol-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--emerald);
+      box-shadow: 0 14px 32px rgba(16, 185, 129, 0.12);
+    }
+    .sol-tag {
+      display: inline-block;
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: var(--emerald-dark);
+      background: rgba(16, 185, 129, 0.11);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+      width: fit-content;
+    }
+    .sol-card h3 { font-size: 1.12rem; font-weight: 800; margin-bottom: 8px; }
+    .sol-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 14px; }
+    .sol-more {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--emerald-dark);
+      padding-top: 12px;
+      border-top: 1px solid #f1f5f9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .sol-card.hidden { display: none; }
 
-    /* Before vs After Visual Section */
+    /* Before & After */
     .ba-card {
       background: var(--bg-card-dark);
       border: 1px solid var(--border-dark);
@@ -364,7 +454,7 @@
     }
     .ba-card.after {
       border-color: rgba(16, 185, 129, 0.55);
-      background: linear-gradient(170deg, rgba(16, 185, 129, 0.14), rgba(17, 31, 56, 0.95));
+      background: linear-gradient(170deg, rgba(16, 185, 129, 0.14), rgba(16, 29, 53, 0.96));
     }
     .ba-label {
       display: inline-block;
@@ -378,7 +468,7 @@
     .ba-label.after { background: rgba(16, 185, 129, 0.22); color: #6ee7b7; }
     .ba-card h3 { font-size: 1.24rem; font-weight: 900; margin-bottom: 16px; }
     .serp-mock {
-      background: rgba(6, 12, 23, 0.75);
+      background: rgba(5, 10, 20, 0.78);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 14px;
       padding: 14px;
@@ -407,73 +497,7 @@
       border: 1px dashed rgba(244, 63, 94, 0.45);
       color: #fda4af;
     }
-    .ba-points {
-      list-style: none;
-      display: grid;
-      gap: 8px;
-      font-size: 0.92rem;
-      color: #cbd5e1;
-    }
-
-    /* 8 Solutions */
-    .sol-tabs {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 30px;
-    }
-    .sol-tab {
-      padding: 10px 18px;
-      border-radius: 999px;
-      border: 1px solid var(--border-light);
-      background: #fff;
-      color: var(--text-muted);
-      font-weight: 700;
-      font-size: 0.9rem;
-      transition: all 0.2s;
-    }
-    .sol-tab.active {
-      background: var(--bg-navy);
-      color: #fff;
-      border-color: var(--bg-navy);
-    }
-    .sol-card {
-      background: #fff;
-      border: 1px solid var(--border-light);
-      border-radius: 18px;
-      padding: 24px 20px;
-      box-shadow: 0 6px 22px rgba(15, 23, 42, 0.04);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-    .sol-card:hover { transform: translateY(-3px); border-color: var(--emerald); }
-    .sol-tag {
-      display: inline-block;
-      font-size: 0.76rem;
-      font-weight: 800;
-      color: var(--emerald-dark);
-      background: rgba(16, 185, 129, 0.11);
-      padding: 4px 10px;
-      border-radius: 999px;
-      margin-bottom: 12px;
-      width: fit-content;
-    }
-    .sol-card h3 { font-size: 1.12rem; font-weight: 800; margin-bottom: 8px; }
-    .sol-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 14px; }
-    .sol-list {
-      list-style: none;
-      display: grid;
-      gap: 6px;
-      font-size: 0.86rem;
-      color: #334155;
-      padding-top: 12px;
-      border-top: 1px solid #f1f5f9;
-    }
-    .sol-list li::before { content: "✓ "; color: var(--emerald-dark); font-weight: 900; }
-    .sol-card.hidden { display: none; }
+    .ba-points { list-style: none; display: grid; gap: 8px; font-size: 0.92rem; color: #cbd5e1; }
 
     /* Process */
     .step-card {
@@ -495,46 +519,69 @@
     .step-card h3 { font-size: 1.08rem; font-weight: 800; margin-bottom: 8px; }
     .step-card p { font-size: 0.91rem; color: var(--text-muted); }
 
-    /* Free Diagnosis Preview + Contact */
-    .diag-grid {
+    /* Consultation Form */
+    .consult-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.05fr 0.95fr;
       gap: 28px;
       align-items: stretch;
     }
-    .diag-preview {
+    .form-card {
       background: var(--bg-light);
       border: 1px solid var(--border-light);
       border-radius: 22px;
-      padding: 30px 26px;
+      padding: 32px 28px;
     }
-    .diag-preview h3 { font-size: 1.3rem; font-weight: 900; margin-bottom: 8px; }
-    .diag-preview p { font-size: 0.94rem; color: var(--text-muted); margin-bottom: 20px; }
-    .diag-items { display: grid; gap: 12px; }
-    .diag-item {
+    .form-card h3 { font-size: 1.35rem; font-weight: 900; margin-bottom: 8px; }
+    .form-card > p { font-size: 0.94rem; color: var(--text-muted); margin-bottom: 20px; }
+    .field { margin-bottom: 14px; }
+    .field label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: #334155;
+    }
+    .field input, .field textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid #cbd5e1;
+      font-family: inherit;
+      font-size: 0.94rem;
       background: #fff;
-      border: 1px solid var(--border-light);
-      border-radius: 14px;
-      padding: 15px 16px;
+      color: var(--text-dark);
+    }
+    .field input:focus, .field textarea:focus {
+      outline: none;
+      border-color: var(--emerald);
+    }
+    .topic-checks {
       display: flex;
-      gap: 12px;
-      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 8px;
     }
-    .diag-num {
-      width: 28px;
-      height: 28px;
-      border-radius: 8px;
-      background: var(--emerald);
+    .topic-chip {
+      padding: 7px 13px;
+      border-radius: 999px;
+      border: 1px solid #cbd5e1;
+      background: #fff;
+      font-size: 0.83rem;
+      font-weight: 700;
+      color: #475569;
+    }
+    .topic-chip.selected {
+      background: var(--bg-navy);
       color: #fff;
-      font-weight: 900;
-      font-size: 0.84rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
+      border-color: var(--bg-navy);
     }
-    .diag-item strong { display: block; font-size: 0.96rem; margin-bottom: 2px; }
-    .diag-item span { font-size: 0.86rem; color: var(--text-muted); }
+    .form-notice {
+      font-size: 0.82rem;
+      color: var(--emerald-dark);
+      font-weight: 700;
+      margin-top: 10px;
+      min-height: 20px;
+    }
 
     .contact-box {
       background: linear-gradient(155deg, var(--bg-dark), var(--bg-navy));
@@ -546,13 +593,9 @@
       justify-content: center;
       border: 1px solid var(--border-dark);
     }
-    .contact-box h3 { font-size: 1.5rem; font-weight: 900; line-height: 1.35; margin-bottom: 10px; }
+    .contact-box h3 { font-size: 1.48rem; font-weight: 900; line-height: 1.35; margin-bottom: 10px; }
     .contact-box p { color: #cbd5e1; font-size: 0.96rem; margin-bottom: 22px; }
-    .info-pills {
-      display: grid;
-      gap: 9px;
-      margin-top: 20px;
-    }
+    .info-pills { display: grid; gap: 9px; margin-top: 20px; }
     .info-pill {
       background: rgba(255, 255, 255, 0.07);
       border: 1px solid rgba(255, 255, 255, 0.14);
@@ -564,7 +607,57 @@
     }
     .info-pill strong { color: var(--emerald-glow); }
 
-    /* FAQ */
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 10, 20, 0.78);
+      backdrop-filter: blur(6px);
+      z-index: 200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal-box {
+      background: #fff;
+      color: var(--text-dark);
+      border-radius: 22px;
+      max-width: 520px;
+      width: 100%;
+      padding: 28px 26px;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      right: 18px;
+      top: 18px;
+      background: #f1f5f9;
+      border: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      font-size: 1.1rem;
+      font-weight: 800;
+    }
+    .modal-box h3 { font-size: 1.35rem; font-weight: 900; margin-bottom: 10px; padding-right: 34px; }
+    .modal-box p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 16px; }
+    .modal-list {
+      list-style: none;
+      background: var(--bg-light);
+      border: 1px solid var(--border-light);
+      border-radius: 14px;
+      padding: 16px;
+      display: grid;
+      gap: 8px;
+      margin-bottom: 20px;
+      font-size: 0.92rem;
+    }
+    .modal-list li::before { content: "✓ "; color: var(--emerald-dark); font-weight: 900; }
+
+    /* FAQ & Channels */
     .faq-list { max-width: 860px; margin: 0 auto; display: grid; gap: 12px; }
     .faq-item {
       background: #fff;
@@ -586,12 +679,7 @@
       align-items: center;
       gap: 12px;
     }
-    .faq-a {
-      display: none;
-      padding: 0 22px 20px;
-      font-size: 0.93rem;
-      color: var(--text-muted);
-    }
+    .faq-a { display: none; padding: 0 22px 20px; font-size: 0.93rem; color: var(--text-muted); }
     .faq-item.open .faq-a { display: block; }
 
     .channel-links {
@@ -632,7 +720,7 @@
     .floating-cta:hover { transform: translateY(-2px); }
 
     footer {
-      background: #050a12;
+      background: #040811;
       color: #94a3b8;
       padding: 34px 0 56px;
       font-size: 0.86rem;
@@ -647,16 +735,15 @@
     }
 
     @media (max-width: 960px) {
-      .hero-inner, .diag-grid, .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; }
+      .hero-inner, .showcase-grid, .consult-grid, .grid-4, .grid-2 { grid-template-columns: 1fr; }
       .nav-links { display: none; }
       .menu-toggle { display: inline-flex; }
+      .hero-float-badge { left: 12px; bottom: 12px; }
     }
     @media (max-width: 600px) {
-      section { padding: 54px 0; }
+      section { padding: 56px 0; }
       .hero { padding: 50px 0 46px; }
       .cta-row .btn { width: 100%; }
-      .rank-compare { grid-template-columns: 1fr; }
-      .rank-arrow { text-align: center; transform: rotate(90deg); }
       .floating-cta { right: 14px; bottom: 14px; padding: 11px 16px; font-size: 0.86rem; }
     }
   </style>
@@ -670,10 +757,10 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="#before-after">노출 변화 구조</a></li>
-        <li><a href="#solutions">8대 핵심 솔루션</a></li>
-        <li><a href="#process">4단계 프로세스</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#showcase">핵심 역량</a></li>
+        <li><a href="#solutions">8대 솔루션</a></li>
+        <li><a href="#before-after">노출 변화</a></li>
+        <li><a href="#process">진행 절차</a></li>
         <li><a href="#contact">무료 진단</a></li>
       </ul>
 
@@ -683,28 +770,28 @@
       </div>
     </div>
     <nav class="mobile-menu" id="mobileMenu">
-      <a href="#before-after">노출 변화 구조</a>
-      <a href="#solutions">8대 핵심 솔루션</a>
-      <a href="#process">4단계 프로세스</a>
-      <a href="#faq">FAQ</a>
+      <a href="#showcase">핵심 역량</a>
+      <a href="#solutions">8대 솔루션</a>
+      <a href="#before-after">노출 변화</a>
+      <a href="#process">진행 절차</a>
       <a href="#contact">무료 진단</a>
     </nav>
   </header>
 
   <main>
-    <!-- Hero with Visual Dashboard -->
+    <!-- Hero -->
     <section class="hero">
       <div class="container hero-inner">
         <div>
           <span class="pill-badge">스마트스토어 · 쿠팡 · 종합 마케팅 실행사</span>
           <h1>
             검색 1페이지에 올라야<br />
-            <span class="accent">매출이 시작됩니다.</span>
+            <span class="accent">진짜 매출이 시작됩니다.</span>
           </h1>
           <p>
             좋은 상품인데 3~4페이지에 묻혀 있나요?
             상위노출랩은 키워드·리워드·체험단·숏폼·검색광고를 연결해
-            상품이 실제로 클릭되고 팔리는 상위노출 구조를 만듭니다.
+            상품이 실제로 클릭되고 팔리는 상위노출 구조를 설계·실행합니다.
           </p>
           <div class="cta-row">
             <a href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener" class="btn btn-kakao">
@@ -716,93 +803,224 @@
           </div>
         </div>
 
-        <!-- Visual Optimization Dashboard -->
-        <aside class="viz-board">
-          <div class="viz-top">
-            <span class="viz-title">RANK OPTIMIZATION FLOW</span>
-            <span class="viz-badge">실행 구조 예시</span>
+        <div class="hero-visual-wrap">
+          <div class="hero-visual-frame">
+            <img src="hero-visual.png" alt="상위노출랩 검색 순위 최적화 3D 대시보드" />
           </div>
-
-          <div class="chart-box">
-            <div class="chart-legend">
-              <span>키워드 · 유입 · 전환 연동 곡선</span>
-              <strong>1페이지 안착 목표</strong>
-            </div>
-            <svg viewBox="0 0 360 130" width="100%" height="130" role="img" aria-label="검색 순위 상승 흐름 그래프">
-              <defs>
-                <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#10b981" stop-opacity="0.42" />
-                  <stop offset="100%" stop-color="#10b981" stop-opacity="0.02" />
-                </linearGradient>
-                <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stop-color="#38bdf8" />
-                  <stop offset="100%" stop-color="#34d399" />
-                </linearGradient>
-              </defs>
-              <line x1="20" y1="30" x2="340" y2="30" stroke="rgba(255,255,255,0.08)" stroke-dasharray="4 4" />
-              <line x1="20" y1="65" x2="340" y2="65" stroke="rgba(255,255,255,0.08)" stroke-dasharray="4 4" />
-              <line x1="20" y1="100" x2="340" y2="100" stroke="rgba(255,255,255,0.08)" stroke-dasharray="4 4" />
-              <path d="M24,104 C90,98 130,82 180,62 C230,42 275,28 334,20 L334,112 L24,112 Z" fill="url(#areaGrad)" />
-              <path d="M24,104 C90,98 130,82 180,62 C230,42 275,28 334,20" fill="none" stroke="url(#lineGrad)" stroke-width="3.5" stroke-linecap="round" />
-              <circle cx="24" cy="104" r="5" fill="#94a3b8" />
-              <circle cx="180" cy="62" r="5" fill="#38bdf8" />
-              <circle cx="334" cy="20" r="6.5" fill="#34d399" stroke="#060c17" stroke-width="2" />
-              <text x="18" y="124" fill="#94a3b8" font-size="10">초기 진단</text>
-              <text x="150" y="124" fill="#7dd3fc" font-size="10">SEO·리워드</text>
-              <text x="292" y="124" fill="#6ee7b7" font-size="10" font-weight="bold">상위 안착</text>
-            </svg>
+          <div class="hero-float-badge">
+            <small>키워드 · 유입 · 전환 통합 설계</small>
+            <strong>1페이지 핵심 노출 목표 실행</strong>
           </div>
-
-          <div class="rank-compare">
-            <div class="rank-box">
-              <small>진단 전 (BEFORE)</small>
-              <strong>검색 3~4페이지</strong>
-            </div>
-            <div class="rank-arrow">→</div>
-            <div class="rank-box after">
-              <small>최적화 후 (TARGET)</small>
-              <strong>1페이지 핵심 노출</strong>
-            </div>
-          </div>
-        </aside>
+        </div>
       </div>
     </section>
 
-    <!-- Rolling Keywords -->
-    <div class="marquee-wrap" aria-hidden="true">
+    <!-- Rolling Category Marquee -->
+    <div class="marquee-section" aria-hidden="true">
       <div class="marquee-track">
-        <div class="marquee-pill"><span>#</span>스마트스토어 상위노출</div>
-        <div class="marquee-pill"><span>#</span>네이버 쇼핑 SEO</div>
-        <div class="marquee-pill"><span>#</span>쿠팡 순위 최적화</div>
-        <div class="marquee-pill"><span>#</span>리워드 · 오퍼월 솔루션</div>
-        <div class="marquee-pill"><span>#</span>네이버 플레이스</div>
-        <div class="marquee-pill"><span>#</span>블로그 · 인스타 체험단</div>
-        <div class="marquee-pill"><span>#</span>숏폼 · 릴스 · 틱톡</div>
-        <div class="marquee-pill"><span>#</span>파워링크 · 퍼포먼스 광고</div>
-        <div class="marquee-pill"><span>#</span>언론송출 · 브랜딩</div>
-        <div class="marquee-pill"><span>#</span>스마트스토어 상위노출</div>
-        <div class="marquee-pill"><span>#</span>네이버 쇼핑 SEO</div>
-        <div class="marquee-pill"><span>#</span>쿠팡 순위 최적화</div>
-        <div class="marquee-pill"><span>#</span>리워드 · 오퍼월 솔루션</div>
-        <div class="marquee-pill"><span>#</span>네이버 플레이스</div>
-        <div class="marquee-pill"><span>#</span>블로그 · 인스타 체험단</div>
-        <div class="marquee-pill"><span>#</span>숏폼 · 릴스 · 틱톡</div>
-        <div class="marquee-pill"><span>#</span>파워링크 · 퍼포먼스 광고</div>
-        <div class="marquee-pill"><span>#</span>언론송출 · 브랜딩</div>
+        <div class="rank-card">
+          <div class="rank-card-top"><span class="rank-cat">스마트스토어</span><span class="rank-goal">목표 설계</span></div>
+          <strong>생활·주방용품 SEO</strong>
+          <span>메인·세부 키워드 + 리워드 유입</span>
+        </div>
+        <div class="rank-card">
+          <div class="rank-card-top"><span class="rank-cat">쿠팡</span><span class="rank-goal">전환 최적화</span></div>
+          <strong>뷰티·코스메틱</strong>
+          <span>검색 노출 + 체험단 리뷰 확산</span>
+        </div>
+        <div class="rank-card">
+          <div class="rank-card-top"><span class="rank-cat">리워드 · 오퍼월</span><span class="rank-goal">반응 지표</span></div>
+          <strong>건강기능식품</strong>
+          <span>실사용자 체험형 유입 캠페인</span>
+        </div>
+        <div class="rank-card">
+          <div class="rank-card-top"><span class="rank-cat">숏폼 · 바이럴</span><span class="rank-goal">다채널 확산</span></div>
+          <strong>패션 · 잡화 브랜드</strong>
+          <span>쇼츠·릴스·틱톡·인스타 연동</span>
+        </div>
+        <div class="rank-card">
+          <div class="rank-card-top"><span class="rank-cat">네이버 플레이스</span><span class="rank-goal">지역 상위</span></div>
+          <strong>오프라인 매장·병원</strong>
+          <span>저장·리뷰·지도 노출 최적화</span>
+        </div>
+        <div class="rank-card">
+          <div class="rank-card-top"><span class="rank-cat">종합 대행</span><span class="rank-goal">풀퍼널 운영</span></div>
+          <strong>신규 런칭 브랜드</strong>
+          <span>홈페이지·파워링크·언론송출</span>
+        </div>
+        <!-- Duplicate for seamless loop -->
+        <div class="rank-card">
+          <div class="rank-card-top"><span class="rank-cat">스마트스토어</span><span class="rank-goal">목표 설계</span></div>
+          <strong>생활·주방용품 SEO</strong>
+          <span>메인·세부 키워드 + 리워드 유입</span>
+        </div>
+        <div class="rank-card">
+          <div class="rank-card-top"><span class="rank-cat">쿠팡</span><span class="rank-goal">전환 최적화</span></div>
+          <strong>뷰티·코스메틱</strong>
+          <span>검색 노출 + 체험단 리뷰 확산</span>
+        </div>
+        <div class="rank-card">
+          <div class="rank-card-top"><span class="rank-cat">리워드 · 오퍼월</span><span class="rank-goal">반응 지표</span></div>
+          <strong>건강기능식품</strong>
+          <span>실사용자 체험형 유입 캠페인</span>
+        </div>
+        <div class="rank-card">
+          <div class="rank-card-top"><span class="rank-cat">숏폼 · 바이럴</span><span class="rank-goal">다채널 확산</span></div>
+          <strong>패션 · 잡화 브랜드</strong>
+          <span>쇼츠·릴스·틱톡·인스타 연동</span>
+        </div>
       </div>
     </div>
 
-    <!-- Before & After Visual Comparison -->
+    <!-- 3D Visual Showcase -->
+    <section id="showcase" class="dark-sec">
+      <div class="container">
+        <div class="showcase-grid reveal">
+          <div class="showcase-img">
+            <img src="commerce-visual.png" alt="쇼핑몰 상위노출 및 리워드 마케팅 비주얼" />
+          </div>
+          <div class="showcase-text">
+            <span class="eyebrow">COMMERCE &amp; REWARD</span>
+            <h3>검색 노출부터 리워드 유입까지<br />쇼핑몰에 맞춘 정밀 실행</h3>
+            <p>단순히 광고비만 태우는 것이 아니라, 상품이 검색 상단에 올라가고 유지되는 핵심 지표를 함께 설계합니다.</p>
+            <div class="feature-pills">
+              <div class="feature-pill">
+                <strong>스마트스토어 · 쿠팡 키워드 구조 최적화</strong>
+                <span>경쟁 가능한 황금 키워드 발굴부터 상품명·태그·카테고리까지 정비합니다.</span>
+              </div>
+              <div class="feature-pill">
+                <strong>실사용자 기반 리워드 · 오퍼월 유입</strong>
+                <span>국내 제휴 매체를 통한 체험형 유입으로 상품 반응과 체류 흐름을 만듭니다.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-grid reveal">
+          <div class="showcase-text">
+            <span class="eyebrow">VIRAL · SHORT-FORM · ALL-IN-ONE</span>
+            <h3>체험단·숏폼·검색광고·언론까지<br />필요한 모든 마케팅을 한 번에</h3>
+            <p>상위노출 이후 실제 구매로 이어지려면 후기·영상·신뢰도가 받쳐줘야 합니다. 상위노출랩이 한 팀처럼 움직입니다.</p>
+            <div class="feature-pills">
+              <div class="feature-pill">
+                <strong>블로그 · 인스타 체험단 &amp; 15초 숏폼</strong>
+                <span>검색에 남는 리얼 후기와 유튜브·틱톡·릴스 확산 콘텐츠를 동시에 운영합니다.</span>
+              </div>
+              <div class="feature-pill">
+                <strong>파워링크 · 플레이스 · 언론송출 · 홈페이지</strong>
+                <span>온라인 브랜드 성장에 필요한 모든 채널을 원스톱으로 대행해 드립니다.</span>
+              </div>
+            </div>
+          </div>
+          <div class="showcase-img">
+            <img src="media-visual.png" alt="숏폼 및 체험단 종합 마케팅 비주얼" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 Solutions (Click for Modal) -->
+    <section id="solutions" class="light-sec">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="eyebrow">8 MARKETING SOLUTIONS</span>
+          <h2>카드를 누르면 상세 실행 내용을 확인할 수 있습니다</h2>
+          <p>내 스토어와 브랜드 단계에 필요한 솔루션만 골라 조합해 보세요.</p>
+        </div>
+
+        <div class="sol-tabs">
+          <button class="sol-tab active" data-cat="all">전체 보기 (8)</button>
+          <button class="sol-tab" data-cat="commerce">스토어 · 쿠팡 · 리워드</button>
+          <button class="sol-tab" data-cat="viral">체험단 · 숏폼 · 플레이스</button>
+          <button class="sol-tab" data-cat="ads">검색광고 · 언론 · 웹</button>
+        </div>
+
+        <div class="grid-4">
+          <article class="sol-card reveal" data-cat="commerce" data-key="store">
+            <div>
+              <span class="sol-tag">주력 실행</span>
+              <h3>스마트스토어 상위노출</h3>
+              <p>키워드·상품명·유입·전환 지표를 기준으로 검색 1페이지 안착을 설계합니다.</p>
+            </div>
+            <div class="sol-more"><span>자세히 보기</span><span>→</span></div>
+          </article>
+
+          <article class="sol-card reveal" data-cat="commerce" data-key="coupang">
+            <div>
+              <span class="sol-tag">오픈마켓</span>
+              <h3>쿠팡 마케팅</h3>
+              <p>로켓·윙 상품의 검색 노출과 클릭·구매 전환 흐름을 체계적으로 개선합니다.</p>
+            </div>
+            <div class="sol-more"><span>자세히 보기</span><span>→</span></div>
+          </article>
+
+          <article class="sol-card reveal" data-cat="commerce" data-key="reward">
+            <div>
+              <span class="sol-tag">유입 솔루션</span>
+              <h3>리워드 · 오퍼월</h3>
+              <p>실사용자 참여 기반 체험형 유입으로 상품 반응과 체류 지표를 높입니다.</p>
+            </div>
+            <div class="sol-more"><span>자세히 보기</span><span>→</span></div>
+          </article>
+
+          <article class="sol-card reveal" data-cat="viral" data-key="place">
+            <div>
+              <span class="sol-tag">로컬 마케팅</span>
+              <h3>네이버 플레이스</h3>
+              <p>오프라인 매장의 지역 검색 노출과 저장·리뷰·방문 전환을 끌어올립니다.</p>
+            </div>
+            <div class="sol-more"><span>자세히 보기</span><span>→</span></div>
+          </article>
+
+          <article class="sol-card reveal" data-cat="viral" data-key="review">
+            <div>
+              <span class="sol-tag">리얼 후기</span>
+              <h3>블로그 · 인스타 체험단</h3>
+              <p>실사용자의 생생한 후기 콘텐츠로 검색 영역 신뢰도와 전환율을 높입니다.</p>
+            </div>
+            <div class="sol-more"><span>자세히 보기</span><span>→</span></div>
+          </article>
+
+          <article class="sol-card reveal" data-cat="viral" data-key="short">
+            <div>
+              <span class="sol-tag">영상 확산</span>
+              <h3>숏폼 마케팅</h3>
+              <p>쇼츠·틱톡·릴스·네이버 클립용 15초 내외 고효율 숏폼을 제작·배포합니다.</p>
+            </div>
+            <div class="sol-more"><span>자세히 보기</span><span>→</span></div>
+          </article>
+
+          <article class="sol-card reveal" data-cat="ads" data-key="powerlink">
+            <div>
+              <span class="sol-tag">검색광고</span>
+              <h3>파워링크 · 퍼포먼스</h3>
+              <p>불필요한 클릭 비용을 줄이고 실제 구매로 이어지는 키워드 중심으로 집행합니다.</p>
+            </div>
+            <div class="sol-more"><span>자세히 보기</span><span>→</span></div>
+          </article>
+
+          <article class="sol-card reveal" data-cat="ads" data-key="press">
+            <div>
+              <span class="sol-tag">신뢰 · 브랜딩</span>
+              <h3>언론송출 · 홈페이지</h3>
+              <p>공식 보도자료 송출과 브랜드 홈페이지 구축으로 브랜드 신뢰도를 완성합니다.</p>
+            </div>
+            <div class="sol-more"><span>자세히 보기</span><span>→</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Before & After -->
     <section id="before-after" class="dark-sec">
       <div class="container">
-        <div class="sec-head">
+        <div class="sec-head reveal">
           <span class="eyebrow">BEFORE &amp; AFTER</span>
-          <h2>왜 어떤 상품은 1페이지에 있고,<br />어떤 상품은 끝없이 밀릴까요?</h2>
-          <p>광고비만 태우는 구조와 상위노출이 유지되는 구조의 차이를 한눈에 확인해 보세요.</p>
+          <h2>광고만 끄면 사라지는 노출이 아니라<br />유지되는 구조를 만듭니다</h2>
         </div>
 
         <div class="grid-2">
-          <article class="ba-card">
+          <article class="ba-card reveal">
             <span class="ba-label before">BEFORE · 기존 운영</span>
             <h3>검색해도 보이지 않는 3~4페이지</h3>
             <div class="serp-mock">
@@ -817,7 +1035,7 @@
             </ul>
           </article>
 
-          <article class="ba-card after">
+          <article class="ba-card after reveal">
             <span class="ba-label after">AFTER · 상위노출랩 설계</span>
             <h3>키워드·유입·후기가 맞물리는 1페이지</h3>
             <div class="serp-mock">
@@ -835,148 +1053,32 @@
       </div>
     </section>
 
-    <!-- 8 Solutions -->
-    <section id="solutions" class="light-sec">
-      <div class="container">
-        <div class="sec-head">
-          <span class="eyebrow">8 MARKETING SOLUTIONS</span>
-          <h2>쇼핑몰 상위노출부터 종합 마케팅까지<br />필요한 실행을 한 곳에서</h2>
-          <p>내 스토어와 브랜드 단계에 맞는 솔루션을 조합해 드립니다.</p>
-        </div>
-
-        <div class="sol-tabs">
-          <button class="sol-tab active" data-cat="all">전체 보기 (8)</button>
-          <button class="sol-tab" data-cat="commerce">스토어 · 쿠팡 · 리워드</button>
-          <button class="sol-tab" data-cat="viral">체험단 · 숏폼 · 플레이스</button>
-          <button class="sol-tab" data-cat="ads">검색광고 · 언론 · 웹</button>
-        </div>
-
-        <div class="grid-4">
-          <article class="sol-card" data-cat="commerce">
-            <div>
-              <span class="sol-tag">주력 실행</span>
-              <h3>스마트스토어 상위노출</h3>
-              <p>적합도·인기도·신뢰도 지표를 기준으로 키워드와 상품 구조를 정밀 설계합니다.</p>
-            </div>
-            <ul class="sol-list">
-              <li>메인·세부 키워드 발굴</li>
-              <li>상품명·태그·카테고리 정비</li>
-            </ul>
-          </article>
-
-          <article class="sol-card" data-cat="commerce">
-            <div>
-              <span class="sol-tag">오픈마켓</span>
-              <h3>쿠팡 마케팅</h3>
-              <p>로켓·윙 상품의 검색 노출과 클릭·구매 전환 흐름을 체계적으로 개선합니다.</p>
-            </div>
-            <ul class="sol-list">
-              <li>아이템위너·키워드 구조 점검</li>
-              <li>쿠팡 광고 효율 최적화</li>
-            </ul>
-          </article>
-
-          <article class="sol-card" data-cat="commerce">
-            <div>
-              <span class="sol-tag">유입 솔루션</span>
-              <h3>리워드 · 오퍼월</h3>
-              <p>실사용자 참여 기반의 체험형 유입으로 상품 반응과 체류 지표를 높입니다.</p>
-            </div>
-            <ul class="sol-list">
-              <li>제휴 매체 맞춤 캠페인 설계</li>
-              <li>안정적인 유입·반응 관리</li>
-            </ul>
-          </article>
-
-          <article class="sol-card" data-cat="viral">
-            <div>
-              <span class="sol-tag">로컬 마케팅</span>
-              <h3>네이버 플레이스</h3>
-              <p>오프라인 매장의 지역 검색 노출과 저장·리뷰·방문 전환을 끌어올립니다.</p>
-            </div>
-            <ul class="sol-list">
-              <li>대표 키워드·소식 세팅</li>
-              <li>방문자 리뷰·유입 관리</li>
-            </ul>
-          </article>
-
-          <article class="sol-card" data-cat="viral">
-            <div>
-              <span class="sol-tag">리얼 후기</span>
-              <h3>블로그 · 인스타 체험단</h3>
-              <p>실사용자의 생생한 후기 콘텐츠로 검색 영역 신뢰도와 구매 전환율을 높입니다.</p>
-            </div>
-            <ul class="sol-list">
-              <li>타겟 블로거·인스타 매칭</li>
-              <li>검색 노출형 리뷰 가이드</li>
-            </ul>
-          </article>
-
-          <article class="sol-card" data-cat="viral">
-            <div>
-              <span class="sol-tag">영상 확산</span>
-              <h3>숏폼 마케팅</h3>
-              <p>유튜브 쇼츠·틱톡·릴스·네이버 클립용 15초 내외 고효율 숏폼을 제작·배포합니다.</p>
-            </div>
-            <ul class="sol-list">
-              <li>후킹 대본·자막·편집</li>
-              <li>멀티 채널 동시 확산</li>
-            </ul>
-          </article>
-
-          <article class="sol-card" data-cat="ads">
-            <div>
-              <span class="sol-tag">검색광고</span>
-              <h3>파워링크 · 퍼포먼스</h3>
-              <p>불필요한 클릭 비용을 줄이고 실제 구매로 이어지는 키워드 중심으로 집행합니다.</p>
-            </div>
-            <ul class="sol-list">
-              <li>네이버·구글·메타 광고 세팅</li>
-              <li>ROAS 중심 단가·소재 관리</li>
-            </ul>
-          </article>
-
-          <article class="sol-card" data-cat="ads">
-            <div>
-              <span class="sol-tag">신뢰 · 브랜딩</span>
-              <h3>언론송출 · 홈페이지</h3>
-              <p>공식 보도자료 송출과 브랜드 홈페이지 구축으로 브랜드 신뢰도를 완성합니다.</p>
-            </div>
-            <ul class="sol-list">
-              <li>언론 기사 송출 및 검색 반영</li>
-              <li>반응형 랜딩페이지 제작</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <!-- Process -->
     <section id="process" class="white-sec">
       <div class="container">
-        <div class="sec-head">
+        <div class="sec-head reveal">
           <span class="eyebrow">WORKFLOW</span>
           <h2>모든 브랜드에 같은 전략은 쓰지 않습니다</h2>
           <p>카테고리, 상품, 경쟁도에 따라 다른 맞춤 4단계 프로세스로 운영합니다.</p>
         </div>
 
         <div class="grid-4">
-          <div class="step-card">
+          <div class="step-card reveal">
             <span class="step-badge">STEP 01</span>
             <h3>브랜드 기초 진단</h3>
             <p>현재 판매 중인 상품, 키워드 노출 위치, 경쟁사 현황을 정밀 진단합니다.</p>
           </div>
-          <div class="step-card">
+          <div class="step-card reveal">
             <span class="step-badge">STEP 02</span>
             <h3>최적화 테스트 설계</h3>
             <p>예산과 목표에 맞춰 효과가 가장 빠른 채널 조합과 A/B 테스트를 설계합니다.</p>
           </div>
-          <div class="step-card">
+          <div class="step-card reveal">
             <span class="step-badge">STEP 03</span>
             <h3>집중 실행 · 성과 분석</h3>
             <p>세팅과 캠페인을 집행하고 순위·유입·전환 지표를 투명하게 공유합니다.</p>
           </div>
-          <div class="step-card">
+          <div class="step-card reveal">
             <span class="step-badge">STEP 04</span>
             <h3>안정화 및 확장 운영</h3>
             <p>검증된 키워드와 매체를 중심으로 노출 유지 및 매출 확장을 이어갑니다.</p>
@@ -985,42 +1087,46 @@
       </div>
     </section>
 
-    <!-- Free Diagnosis Preview + Contact -->
+    <!-- Consultation Form + Direct Contact -->
     <section id="contact" class="white-sec" style="border-top: none;">
       <div class="container">
-        <div class="diag-grid">
-          <div class="diag-preview">
-            <span class="eyebrow">FREE DIAGNOSIS</span>
-            <h3>지금 문의하시면 이 3가지를 바로 짚어드립니다</h3>
-            <p>부담 없이 링크 하나만 보내주셔도 현재 상태를 정리해 드립니다.</p>
-            <div class="diag-items">
-              <div class="diag-item">
-                <span class="diag-num">1</span>
-                <div>
-                  <strong>현재 상품 키워드 · 노출 위치 진단</strong>
-                  <span>지금 공략 중인 키워드가 경쟁 가능한지부터 확인합니다.</span>
+        <div class="consult-grid">
+          <div class="form-card reveal">
+            <h3>무료 진단 · 상담 신청서</h3>
+            <p>간단히 적어 보내기 누르시면 내용이 자동 복사되고 오픈카톡 상담방으로 바로 연결됩니다.</p>
+            <form id="consultForm">
+              <div class="field">
+                <label for="brandName">스토어 / 브랜드명</label>
+                <input id="brandName" type="text" placeholder="예: OO스토어 / 신제품 런칭" required />
+              </div>
+              <div class="field">
+                <label for="storeUrl">스토어 링크 또는 주력 키워드</label>
+                <input id="storeUrl" type="text" placeholder="예: smartstore.naver.com/... 또는 키워드" required />
+              </div>
+              <div class="field">
+                <label for="userPhone">연락처</label>
+                <input id="userPhone" type="tel" placeholder="예: 010-0000-0000" />
+              </div>
+              <div class="field">
+                <label>관심 분야 (선택)</label>
+                <div class="topic-checks" id="topicChecks">
+                  <button type="button" class="topic-chip selected">스마트스토어</button>
+                  <button type="button" class="topic-chip">쿠팡</button>
+                  <button type="button" class="topic-chip">리워드·오퍼월</button>
+                  <button type="button" class="topic-chip">체험단·숏폼</button>
+                  <button type="button" class="topic-chip">종합 마케팅</button>
                 </div>
               </div>
-              <div class="diag-item">
-                <span class="diag-num">2</span>
-                <div>
-                  <strong>상세페이지 · 리뷰 전환 병목 점검</strong>
-                  <span>유입은 있는데 구매가 안 나오는 이유를 짚어드립니다.</span>
-                </div>
-              </div>
-              <div class="diag-item">
-                <span class="diag-num">3</span>
-                <div>
-                  <strong>예산별 맞춤 실행 우선순위 제안</strong>
-                  <span>불필요한 상품 없이 지금 당장 필요한 작업만 추천합니다.</span>
-                </div>
-              </div>
-            </div>
+              <button type="submit" class="btn btn-kakao" style="width: 100%; margin-top: 6px;">
+                신청 내용 복사 &amp; 오픈카톡 바로 열기
+              </button>
+              <div class="form-notice" id="formNotice"></div>
+            </form>
           </div>
 
-          <div class="contact-box">
-            <h3>스토어 링크만 보내주세요.<br />맞춤 전략을 바로 안내해 드립니다.</h3>
-            <p>오픈카톡이나 직통 번호로 편하게 연락 주시면 빠르게 확인 후 답변드립니다.</p>
+          <div class="contact-box reveal">
+            <h3>바로 통화하거나<br />카톡으로 편하게 물어보세요</h3>
+            <p>링크 하나만 보내주셔도 현재 노출 위치와 필요한 작업 우선순위를 빠르게 정리해 드립니다.</p>
             <div class="cta-row">
               <a href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener" class="btn btn-kakao">
                 오픈카톡 상담방 바로가기
@@ -1053,7 +1159,7 @@
     <!-- FAQ -->
     <section id="faq" class="light-sec">
       <div class="container">
-        <div class="sec-head">
+        <div class="sec-head reveal">
           <span class="eyebrow">FAQ</span>
           <h2>자주 묻는 질문</h2>
         </div>
@@ -1076,6 +1182,20 @@
     </section>
   </main>
 
+  <!-- Solution Detail Modal -->
+  <div class="modal-backdrop" id="solModal">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="닫기">×</button>
+      <span class="sol-tag" id="modalTag">솔루션</span>
+      <h3 id="modalTitle">제목</h3>
+      <p id="modalDesc">설명</p>
+      <ul class="modal-list" id="modalList"></ul>
+      <a href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener" class="btn btn-kakao" style="width: 100%;">
+        이 솔루션으로 무료 상담받기
+      </a>
+    </div>
+  </div>
+
   <a href="https://open.kakao.com/o/sjZETlYi" target="_blank" rel="noopener" class="floating-cta">
     💬 무료 상담하기
   </a>
@@ -1088,11 +1208,21 @@
   </footer>
 
   <script>
+    // Mobile menu
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('open'));
     mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
 
+    // Scroll reveal
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Category filter
     const tabs = document.querySelectorAll('.sol-tab');
     const cards = document.querySelectorAll('.sol-card');
     tabs.forEach(tab => {
@@ -1107,6 +1237,93 @@
       });
     });
 
+    // Modal details
+    const solData = {
+      store: {
+        tag: '주력 실행',
+        title: '스마트스토어 상위노출 최적화',
+        desc: '네이버 쇼핑 검색 로직의 적합도·인기도·신뢰도 지표를 기준으로 1페이지 안착 구조를 설계합니다.',
+        items: ['카테고리·메인·세부 키워드 정밀 발굴', '상품명·태그·속성값 SEO 구조 정비', '경쟁사 대비 유입·전환 병목 진단 및 개선']
+      },
+      coupang: {
+        tag: '오픈마켓',
+        title: '쿠팡 마케팅 · 노출 최적화',
+        desc: '로켓·윙 판매 상품의 검색 노출과 클릭률·구매 전환율을 체계적으로 끌어올립니다.',
+        items: ['아이템위너 및 검색 키워드 구조 점검', '쿠팡 광고(로켓그로스·검색광고) 효율 개선', '상세페이지 후킹 포인트 및 리뷰 전략']
+      },
+      reward: {
+        tag: '유입 솔루션',
+        title: '리워드 · 오퍼월 솔루션',
+        desc: '실사용자 참여 기반의 체험형 유입을 통해 상품의 반응도와 체류 지표를 안정적으로 높입니다.',
+        items: ['제휴 오퍼월 매체 맞춤 캠페인 세팅', '일별 유입량 분산 및 안정적 순위 관리', '스마트스토어·쿠팡·플레이스 연계 운영']
+      },
+      place: {
+        tag: '로컬 마케팅',
+        title: '네이버 플레이스 상위노출',
+        desc: '매장·병원·카페 등 오프라인 비즈니스의 지도 검색 노출과 방문 예약을 높입니다.',
+        items: ['대표 키워드·메뉴·소식 SEO 세팅', '저장하기·알림받기·방문자 리뷰 활성화', '지역 타겟 블로그 체험단 연계']
+      },
+      review: {
+        tag: '리얼 후기',
+        title: '블로그 · 인스타 체험단',
+        desc: '실사용자가 남기는 고퀄리티 후기로 검색 결과 신뢰도와 구매 전환율을 높입니다.',
+        items: ['제품·업종에 맞는 블로거/인스타그래머 매칭', '키워드 노출을 고려한 포스팅 가이드 제공', '2차 활용 가능한 후기 사진·영상 확보']
+      },
+      short: {
+        tag: '영상 확산',
+        title: '숏폼 마케팅 (쇼츠 · 틱톡 · 릴스)',
+        desc: '15초 안에 시선을 사로잡는 숏폼 콘텐츠로 자연 유입과 브랜드 인지도를 동시에 확보합니다.',
+        items: ['구매를 부르는 후킹 대본·자막·편집', '유튜브 쇼츠·틱톡·인스타 릴스·네이버 클립 동시 배포', '상품 링크 유입 동선 설계']
+      },
+      powerlink: {
+        tag: '검색광고',
+        title: '파워링크 · 퍼포먼스 광고',
+        desc: '불필요한 클릭 비용을 줄이고 실제 전환이 나오는 고효율 키워드 중심으로 운영합니다.',
+        items: ['네이버 파워링크·쇼핑검색광고 세팅', '구글·메타(인스타/페이스북) 리타겟팅', 'ROAS 중심 입찰·소재 A/B 테스트']
+      },
+      press: {
+        tag: '신뢰 · 브랜딩',
+        title: '언론송출 · 브랜드 홈페이지',
+        desc: '공식 보도자료 송출과 전문 브랜드 웹사이트 구축으로 고객 신뢰도를 완성합니다.',
+        items: ['주요 언론사 보도자료 송출 및 포털 검색 반영', '모바일 최적화된 대행사/브랜드 홈페이지 제작', '오픈카톡·전화 즉시 전환 동선 구축']
+      }
+    };
+
+    const modal = document.getElementById('solModal');
+    const modalClose = document.getElementById('modalClose');
+    cards.forEach(c => {
+      c.addEventListener('click', () => {
+        const d = solData[c.dataset.key];
+        if (!d) return;
+        document.getElementById('modalTag').textContent = d.tag;
+        document.getElementById('modalTitle').textContent = d.title;
+        document.getElementById('modalDesc').textContent = d.desc;
+        document.getElementById('modalList').innerHTML = d.items.map(i => `<li>${i}</li>`).join('');
+        modal.classList.add('open');
+      });
+    });
+    modalClose.addEventListener('click', () => modal.classList.remove('open'));
+    modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+
+    // Topic chips
+    document.querySelectorAll('.topic-chip').forEach(chip => {
+      chip.addEventListener('click', () => chip.classList.toggle('selected'));
+    });
+
+    // Consult form -> copy summary + open Kakao
+    document.getElementById('consultForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const brand = document.getElementById('brandName').value.trim();
+      const url = document.getElementById('storeUrl').value.trim();
+      const phone = document.getElementById('userPhone').value.trim() || '미입력';
+      const topics = [...document.querySelectorAll('.topic-chip.selected')].map(c => c.textContent).join(', ') || '전체 상담';
+      const msg = `[상위노출랩 무료 진단 신청]\n• 스토어/브랜드: ${brand}\n• 링크/키워드: ${url}\n• 연락처: ${phone}\n• 관심 분야: ${topics}`;
+      if (navigator.clipboard) navigator.clipboard.writeText(msg).catch(() => {});
+      document.getElementById('formNotice').textContent = '신청 내용이 복사되었어요! 오픈카톡 방에 바로 붙여넣기(Ctrl+V) 해주세요.';
+      window.open('https://open.kakao.com/o/sjZETlYi', '_blank', 'noopener');
+    });
+
+    // FAQ
     document.querySelectorAll('.faq-q').forEach(q => {
       q.addEventListener('click', () => {
         const item = q.parentElement;
