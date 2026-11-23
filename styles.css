@@ -1065,6 +1065,21 @@ section { padding: 86px 0; }
 .next-link span { font-size: 0.85rem; color: #94a3b8; }
 .next-link .go { font-size: 0.82rem; font-weight: 800; color: #7dd3fc; margin-top: 4px; }
 
+/* 밝은 섹션 위의 링크 카드 */
+.light-sec .next-link, .white-sec .next-link {
+  background: #fff;
+  border-color: var(--border-light);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
+}
+.light-sec .next-link:hover, .white-sec .next-link:hover {
+  border-color: var(--emerald);
+  box-shadow: 0 14px 30px rgba(16, 185, 129, 0.12);
+}
+.light-sec .next-link small, .white-sec .next-link small { color: var(--emerald-dark); }
+.light-sec .next-link strong, .white-sec .next-link strong { color: var(--text-dark); }
+.light-sec .next-link span, .white-sec .next-link span { color: var(--text-muted); }
+.light-sec .next-link .go, .white-sec .next-link .go { color: #0284c7; }
+
 .note-box {
   background: rgba(255, 255, 255, 0.04);
   border: 1px dashed rgba(255, 255, 255, 0.18);
